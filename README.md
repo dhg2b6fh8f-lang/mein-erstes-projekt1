@@ -32,6 +32,8 @@ Ein praxisnahes Handbuch, um Jira Software und Jira Service Management (JSM) in 
 | – | [Skripte](scripts/) | Python-Beispiele für die Jira-API |
 | – | [Quellen](quellen.md) | Alle genutzten Quellen |
 | 💼 | **[Vertriebs-Playbook](vertrieb/)** | Positionierung, Preise, Kundengewinnung, Recht, Erstgespräch, Einwände, Angebote, Empfehlungen |
+| 🌐 | **[Website-Handbuch](website-wissen/)** | Professionelles Design, Pflichtinhalte, Recht, Wettbewerb, Betrieb & Content |
+| 🌐 | [Website-Entwurf look-eight](website/) | Aktueller Entwurf der One-Page-Website |
 
 > **Begriffe:** Seit Ende 2025 heißen Jira-Projekte **Spaces** und Vorgänge **Work items**. Im Playbook steht teils noch „Projekt“/„Vorgang“ – gemeint ist dasselbe.
 
