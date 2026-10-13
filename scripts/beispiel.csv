@@ -1,0 +1,4 @@
+summary;description;issuetype;priority;assignee_email;duedate;labels
+Schaltschrank verdrahten;Nach Stromlaufplan Rev. B;Task;High;;2026-11-15;elektrik,auftrag-4711
+Probelauf durchführen;Mit Kunde abstimmen;Task;Medium;;2026-11-30;inbetriebnahme
+Dokumentation übergeben;Betriebsanleitung + CE-Unterlagen;Task;Low;;2026-12-05;doku
