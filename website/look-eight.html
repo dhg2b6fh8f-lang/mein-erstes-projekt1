@@ -171,6 +171,10 @@ footer { padding-block: 40px 56px; display: grid; gap: 24px; font-size: .9rem; c
 .legal > div { display: grid; gap: 6px; min-width: 0; }
 .legal h3 { font-size: 1rem; color: var(--ink); font-family: var(--font-body); font-stretch: 100%; font-weight: 600; }
 .ph { background: var(--mint); color: var(--ink); padding: 0 5px; border-radius: 4px; }
+.privacy summary { cursor: pointer; color: var(--petrol); font-weight: 600; padding-block: 6px; }
+.privacy-body { display: grid; gap: 10px; padding-top: 10px; max-width: 70ch; }
+.privacy-body h4 { margin: 10px 0 0; font-size: .95rem; color: var(--ink); }
+.privacy-body .stand { font-size: .85rem; }
 
 @media (max-width: 920px) {
   .hero, .contact { grid-template-columns: 1fr; gap: 40px; }
@@ -428,7 +432,36 @@ footer { padding-block: 40px 56px; display: grid; gap: 24px; font-size: .9rem; c
     </div>
     <div id="datenschutz">
       <h3>Datenschutz</h3>
-      <p>Diese Seite setzt keine Cookies und verwendet keine Analyse-Werkzeuge. <span class="ph">[Vollständige Datenschutzerklärung ergänzen]</span></p>
+      <p>Diese Seite setzt keine Cookies und verwendet keine Analyse-Werkzeuge.</p>
+      <details class="privacy">
+        <summary>Datenschutzerklärung lesen</summary>
+        <div class="privacy-body">
+          <h4>1. Verantwortlicher</h4>
+          <p>Verantwortlich für die Datenverarbeitung auf dieser Website ist der im <a href="#impressum">Impressum</a> genannte Inhaber von look-eight. Kontakt: Propero@outlook.de</p>
+
+          <h4>2. Aufruf der Website und Server-Logdateien</h4>
+          <p>Beim Aufruf dieser Website verarbeitet unser Hosting-Anbieter automatisch technische Daten, die Ihr Browser übermittelt: IP-Adresse, Datum und Uhrzeit, aufgerufene Seite, Browser und Betriebssystem sowie die zuvor besuchte Seite. Diese Daten werden benötigt, um die Website sicher und stabil auszuliefern. Rechtsgrundlage ist unser berechtigtes Interesse an einem sicheren Betrieb (Art. 6 Abs. 1 lit. f DSGVO). Die Logdaten werden nach kurzer Zeit automatisch gelöscht.</p>
+          <p>Hosting-Anbieter: <span class="ph">[Name und Anschrift des Hosting-Anbieters ergänzen]</span>. Mit dem Anbieter besteht ein Vertrag zur Auftragsverarbeitung.</p>
+
+          <h4>3. Verschlüsselung</h4>
+          <p>Diese Website nutzt eine SSL/TLS-Verschlüsselung. Sie erkennen das am Schloss-Symbol und an „https://“ in der Adresszeile.</p>
+
+          <h4>4. Kontakt per E-Mail</h4>
+          <p>Wenn Sie uns eine E-Mail schreiben, verarbeiten wir Ihre Angaben (z. B. Name, E-Mail-Adresse, Firma, Inhalt der Nachricht), um Ihre Anfrage zu beantworten. Rechtsgrundlage ist die Anbahnung oder Durchführung eines Vertrags (Art. 6 Abs. 1 lit. b DSGVO) bzw. unser berechtigtes Interesse an der Beantwortung von Anfragen (Art. 6 Abs. 1 lit. f DSGVO). Für E-Mails nutzen wir den Dienst Outlook.com der Microsoft Ireland Operations Limited, Irland. Dabei kann eine Übermittlung in die USA nicht ausgeschlossen werden; Microsoft ist nach dem EU-US Data Privacy Framework zertifiziert. Wir löschen Ihre Anfrage, sobald sie erledigt ist und keine gesetzlichen Aufbewahrungsfristen entgegenstehen.</p>
+
+          <h4>5. Cookies, Analyse und externe Inhalte</h4>
+          <p>Wir setzen keine Cookies, nutzen keine Analyse- oder Tracking-Werkzeuge und binden keine Inhalte Dritter wie Videos oder Karten ein. Schriftarten werden lokal von unserem Server geladen; es werden dabei keine Daten an Dritte übertragen.</p>
+
+          <h4>6. Ihre Rechte</h4>
+          <p>Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch gegen Verarbeitungen auf Grundlage berechtigter Interessen (Art. 21). Eine Nachricht an Propero@outlook.de genügt.</p>
+          <p>Sie können sich außerdem bei einer Datenschutz-Aufsichtsbehörde beschweren, zum Beispiel bei der Landesbeauftragten für Datenschutz und Informationsfreiheit Nordrhein-Westfalen (LDI NRW).</p>
+
+          <h4>7. Keine Pflicht zur Angabe, keine automatisierten Entscheidungen</h4>
+          <p>Sie sind nicht verpflichtet, uns Daten mitzuteilen. Ohne Angaben können wir Ihre Anfrage jedoch nicht beantworten. Eine automatisierte Entscheidungsfindung oder Profilbildung findet nicht statt.</p>
+
+          <p class="stand">Stand: Oktober 2026</p>
+        </div>
+      </details>
     </div>
   </div>
   <p>Das Angebot richtet sich ausschließlich an Unternehmen. Jira ist eine Marke von Atlassian; look-eight ist ein unabhängiger Dienstleister. © 2026 look-eight</p>
