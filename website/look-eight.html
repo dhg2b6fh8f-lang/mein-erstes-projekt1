@@ -1,0 +1,404 @@
+<title>look-eight</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@112,500;112,700;112,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: eine ruhige Spalte; der Hero zeigt ein Workflow-Board, auf dem ein Auftrag sichtbar durch die Status läuft. Danach Probleme → Angebote → Ablauf → Über → Kontakt. */
+:root {
+  --bg: #f1f3f2;
+  --surface: #ffffff;
+  --ink: #15202a;
+  --muted: #56626b;
+  --line: #d3d9da;
+  --petrol: #0f6a66;
+  --petrol-soft: #dcebea;
+  --signal: #e9b308;
+  --signal-ink: #5a4400;
+  --font-display: "Archivo", "Arial Narrow", system-ui, sans-serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --step--1: 0.875rem;
+  --step-0: 1.0625rem;
+  --step-1: 1.3rem;
+  --step-2: 1.75rem;
+  --step-3: clamp(2.1rem, 5vw, 3.4rem);
+  --radius: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11181d; --surface: #182229; --ink: #e8eef0; --muted: #9aa8b0; --line: #2a3740;
+    --petrol: #4fbab3; --petrol-soft: #1b3433; --signal: #f2c230; --signal-ink: #f6d66b;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11181d; --surface: #182229; --ink: #e8eef0; --muted: #9aa8b0; --line: #2a3740;
+  --petrol: #4fbab3; --petrol-soft: #1b3433; --signal: #f2c230; --signal-ink: #f6d66b;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: var(--step-0); line-height: 1.6;
+  padding-inline: 20px; padding-block: 0;
+}
+.wrap { max-width: 1060px; margin-inline: auto; }
+h1, h2, h3 { font-family: var(--font-display); font-stretch: 112%; line-height: 1.12; text-wrap: balance; margin: 0; }
+h2 { font-size: var(--step-2); font-weight: 800; }
+h3 { font-size: var(--step-1); font-weight: 700; }
+p { margin: 0; }
+a { color: var(--petrol); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--signal); outline-offset: 3px; border-radius: 4px; }
+.eyebrow { font-family: var(--font-mono); font-size: var(--step--1); letter-spacing: .06em; text-transform: uppercase; color: var(--petrol); }
+.muted { color: var(--muted); }
+section { padding-block: 64px; border-top: 1px solid var(--line); }
+.section-head { display: grid; gap: 10px; max-width: 62ch; margin-bottom: 32px; }
+
+/* Header */
+.top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 20px; flex-wrap: wrap; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--ink); }
+.brand-mark { width: 34px; height: 34px; }
+.brand-name { font-family: var(--font-display); font-stretch: 112%; font-weight: 800; font-size: 1.35rem; letter-spacing: -0.01em; }
+.nav { display: flex; gap: 20px; flex-wrap: wrap; font-size: var(--step--1); }
+.nav a { color: var(--muted); text-decoration: none; }
+.nav a:hover { color: var(--ink); }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: 1.05fr 1fr; gap: 48px; align-items: center; padding-block: 40px 72px; }
+.hero > * { min-width: 0; }
+.hero h1 { font-size: var(--step-3); font-weight: 800; letter-spacing: -0.015em; }
+.hero h1 em { font-style: normal; color: var(--petrol); }
+.hero-copy { display: grid; gap: 22px; }
+.hero-copy p { max-width: 52ch; font-size: 1.12rem; color: var(--muted); }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 999px; font-weight: 600; text-decoration: none; font-size: 1rem; border: 1.5px solid var(--ink); color: var(--ink); background: transparent; cursor: pointer; font-family: inherit; }
+.btn-primary { background: var(--ink); color: var(--bg); }
+.btn:hover { transform: translateY(-1px); }
+
+/* Board */
+.board { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px; display: grid; gap: 12px; box-shadow: 0 18px 40px -28px rgba(10, 30, 40, .45); }
+.board-head { display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: .78rem; color: var(--muted); }
+.cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.col { background: var(--bg); border-radius: 8px; padding: 10px; display: grid; gap: 8px; align-content: start; min-height: 190px; min-width: 0; }
+.col-title { font-family: var(--font-mono); font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 6px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: var(--muted); }
+.col:nth-child(2) .dot { background: var(--petrol); }
+.col:nth-child(3) .dot { background: var(--signal); }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 8px 9px; display: grid; gap: 4px; font-size: .8rem; line-height: 1.35; }
+.card .key { font-family: var(--font-mono); font-size: .7rem; color: var(--muted); }
+.card.live { border-color: var(--petrol); box-shadow: 0 0 0 2px var(--petrol-soft); }
+.sla { font-family: var(--font-mono); font-size: .68rem; color: var(--petrol); }
+.board-foot { font-size: .8rem; color: var(--muted); }
+
+/* Notice */
+.notice { display: grid; grid-template-columns: auto 1fr; gap: 14px 18px; align-items: start; background: var(--surface); border: 1px solid var(--line); border-left: 6px solid var(--signal); border-radius: var(--radius); padding: 20px 22px; }
+.notice-date { font-family: var(--font-mono); font-weight: 500; color: var(--signal-ink); white-space: nowrap; }
+.notice p { max-width: 70ch; }
+
+/* Problems */
+.problems { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.problem { display: grid; gap: 8px; align-content: start; min-width: 0; }
+.problem .quote { font-family: var(--font-display); font-stretch: 112%; font-weight: 700; font-size: 1.15rem; }
+
+/* Offers */
+.offers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.offer { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; display: grid; gap: 12px; align-content: start; min-width: 0; }
+.offer.featured { border-color: var(--petrol); box-shadow: 0 0 0 2px var(--petrol-soft); }
+.offer .tag { font-family: var(--font-mono); font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.offer.featured .tag { color: var(--petrol); }
+.price { font-family: var(--font-display); font-stretch: 112%; font-weight: 800; font-size: 1.6rem; font-variant-numeric: tabular-nums; }
+.price small { font-family: var(--font-body); font-weight: 400; font-size: .85rem; color: var(--muted); }
+.offer ul { margin: 0; padding-left: 18px; display: grid; gap: 6px; font-size: .95rem; color: var(--muted); }
+.fineprint { margin-top: 18px; font-size: var(--step--1); color: var(--muted); }
+
+/* Steps */
+.steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; counter-reset: s; }
+.steps li { counter-increment: s; padding: 0 20px 0 0; display: grid; gap: 8px; align-content: start; min-width: 0; position: relative; }
+.steps li::before { content: counter(s); font-family: var(--font-mono); font-size: .8rem; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: var(--ink); color: var(--bg); }
+.steps li::after { content: ""; position: absolute; top: 15px; left: 38px; right: 8px; height: 1.5px; background: var(--line); }
+.steps li:last-child::after { display: none; }
+.steps p { font-size: .95rem; color: var(--muted); }
+
+/* About */
+.about { display: grid; grid-template-columns: 1fr 1.4fr; gap: 48px; align-items: start; }
+.about > * { min-width: 0; }
+.facts { display: grid; gap: 0; border-top: 1px solid var(--line); }
+.fact { display: grid; grid-template-columns: 9rem 1fr; gap: 16px; padding-block: 12px; border-bottom: 1px solid var(--line); font-size: .97rem; }
+.fact dt { color: var(--muted); font-family: var(--font-mono); font-size: .8rem; text-transform: uppercase; letter-spacing: .05em; padding-top: 3px; }
+.fact dd { margin: 0; }
+.about-text { display: grid; gap: 16px; max-width: 62ch; }
+
+/* Contact */
+.contact { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: start; }
+.contact > * { min-width: 0; }
+.contact-box { background: var(--ink); color: var(--bg); border-radius: var(--radius); padding: 26px; display: grid; gap: 14px; }
+.contact-box .label { font-family: var(--font-mono); font-size: .75rem; text-transform: uppercase; letter-spacing: .06em; opacity: .7; }
+.contact-line { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-size: 1.1rem; }
+.contact-line span { overflow-wrap: anywhere; user-select: all; }
+.copy { background: transparent; color: var(--bg); border: 1px solid currentColor; border-radius: 999px; padding: 6px 14px; font: inherit; font-size: .85rem; cursor: pointer; }
+.copy-status { font-size: .85rem; min-height: 1.2em; opacity: .85; }
+
+footer { border-top: 1px solid var(--line); padding-block: 32px 48px; display: grid; gap: 24px; font-size: var(--step--1); color: var(--muted); }
+.legal { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+.legal > div { display: grid; gap: 6px; min-width: 0; }
+.legal h3 { font-size: 1rem; color: var(--ink); }
+.placeholder { background: var(--petrol-soft); color: var(--ink); padding: 0 4px; border-radius: 3px; }
+
+/* Animation: the live card travels through the board; resting state is visible */
+@media (prefers-reduced-motion: no-preference) {
+  .card.live { animation: pulse 2.8s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { box-shadow: 0 0 0 2px var(--petrol-soft); } 50% { box-shadow: 0 0 0 5px var(--petrol-soft); } }
+  .btn { transition: transform .15s ease; }
+}
+
+@media (max-width: 900px) {
+  .hero, .about, .contact { grid-template-columns: 1fr; gap: 32px; }
+  .offers { grid-template-columns: repeat(2, 1fr); }
+  .steps { grid-template-columns: repeat(2, 1fr); row-gap: 28px; }
+  .steps li::after { display: none; }
+}
+@media (max-width: 600px) {
+  .problems, .offers, .steps, .legal { grid-template-columns: 1fr; }
+  .cols { grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
+  .col { padding: 7px; min-height: 160px; }
+  .card { font-size: .72rem; padding: 6px; }
+  .fact { grid-template-columns: 1fr; gap: 2px; }
+  .notice { grid-template-columns: 1fr; }
+  section { padding-block: 48px; }
+  .nav { display: none; }
+}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="#start" aria-label="look-eight Startseite">
+      <svg class="brand-mark" viewBox="0 0 34 34" aria-hidden="true">
+        <circle cx="17" cy="10" r="7" fill="none" stroke="var(--petrol)" stroke-width="3.2"/>
+        <circle cx="17" cy="24" r="7" fill="none" stroke="var(--ink)" stroke-width="3.2"/>
+        <circle cx="17" cy="17" r="2.4" fill="var(--signal)"/>
+      </svg>
+      <span class="brand-name">look-eight</span>
+    </a>
+    <nav class="nav" aria-label="Seitennavigation">
+      <a href="#angebote">Angebote</a>
+      <a href="#ablauf">Ablauf</a>
+      <a href="#ueber">Über mich</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
+
+  <main id="start">
+    <div class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Jira &amp; Service-Prozesse für Maschinenbau und technischen Service</span>
+        <h1>Kein Auftrag geht mehr im <em>Postfach</em> verloren.</h1>
+        <p>Ich richte Jira und Jira Service Management so ein, dass Ihr Team sieht, wer was bis wann erledigt – schlank, verständlich und ohne Excel-Listen nebenher.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#kontakt">Erstgespräch vereinbaren</a>
+          <a class="btn" href="#angebote">Angebote ansehen</a>
+        </div>
+      </div>
+
+      <div class="board" role="img" aria-label="Beispiel-Board mit Service-Anfragen in den Spalten Offen, In Bearbeitung und Erledigt">
+        <div class="board-head"><span>Service · Störungen</span><span>Beispiel</span></div>
+        <div class="cols">
+          <div class="col">
+            <div class="col-title"><span class="dot"></span>Offen</div>
+            <div class="card"><span class="key">SVC-131</span>Ersatzteil Spindel anfragen<span class="sla">Antwort in 6 h</span></div>
+            <div class="card"><span class="key">SVC-133</span>Wartung Q1 planen</div>
+          </div>
+          <div class="col">
+            <div class="col-title"><span class="dot"></span>In Bearbeitung</div>
+            <div class="card live"><span class="key">SVC-128</span>Anlage 4 stoppt bei Achse Z<span class="sla">Lösung in 1 Tag</span></div>
+            <div class="card"><span class="key">AUF-214</span>Inbetriebnahme Kunde Müller</div>
+          </div>
+          <div class="col">
+            <div class="col-title"><span class="dot"></span>Erledigt</div>
+            <div class="card"><span class="key">SVC-120</span>Software-Update Steuerung</div>
+            <div class="card"><span class="key">SVC-117</span>Schulung Bedienpersonal</div>
+          </div>
+        </div>
+        <div class="board-foot">Jede Anfrage hat einen Status, eine verantwortliche Person und eine Frist.</div>
+      </div>
+    </div>
+
+    <div class="notice" role="note">
+      <span class="notice-date">ab 03.12.2026</span>
+      <p><strong>Jira-Automationen werden nach Schritten abgerechnet.</strong> Mehrkosten sind standardmäßig eingeschaltet. Wer sie abschaltet, riskiert, dass Regeln mitten im Monat stoppen. Der <a href="#angebote">Automation-Check</a> zeigt Ihren Verbrauch und baut die teuersten Regeln um.</p>
+    </div>
+
+    <section aria-labelledby="probleme-h">
+      <div class="section-head">
+        <span class="eyebrow">Kommt Ihnen das bekannt vor?</span>
+        <h2 id="probleme-h">Drei Situationen, die ich oft sehe</h2>
+      </div>
+      <div class="problems">
+        <div class="problem">
+          <p class="quote">„Wer kümmert sich eigentlich um die Störung von gestern?“</p>
+          <p class="muted">Anfragen kommen per Mail, Telefon und Zuruf. Niemand sieht alles, manches bleibt liegen.</p>
+        </div>
+        <div class="problem">
+          <p class="quote">„Wo steht der Auftrag gerade?“</p>
+          <p class="muted">Der Stand steckt in Excel-Listen und in den Köpfen einzelner Leute. Fällt jemand aus, wird es schwierig.</p>
+        </div>
+        <div class="problem">
+          <p class="quote">„Unser Jira ist gewachsen und keiner blickt mehr durch.“</p>
+          <p class="muted">Zu viele Felder, Status und Regeln. Das System wird langsam, die Leute umgehen es.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="angebote" aria-labelledby="angebote-h">
+      <div class="section-head">
+        <span class="eyebrow">Angebote</span>
+        <h2 id="angebote-h">Feste Pakete, klarer Umfang</h2>
+        <p class="muted">Sie wissen vorher, was Sie bekommen und was es kostet. Zum Kennenlernen empfehle ich einen der Checks.</p>
+      </div>
+      <div class="offers">
+        <article class="offer">
+          <span class="tag">Einstieg</span>
+          <h3>Automation- oder Health-Check</h3>
+          <p class="price">ab 390 € <small>Festpreis</small></p>
+          <ul>
+            <li>Verbrauch, Felder, Workflows, Rechte prüfen</li>
+            <li>Teuerste Regeln umbauen</li>
+            <li>Maßnahmenliste mit Prioritäten</li>
+          </ul>
+        </article>
+        <article class="offer">
+          <span class="tag">Paket S</span>
+          <h3>Jira Starter</h3>
+          <p class="price">690 € <small>Festpreis</small></p>
+          <ul>
+            <li>1 Team, 1 Prozess, bis 15 Nutzer</li>
+            <li>Workflow, Board, Dashboard</li>
+            <li>3 Automationen, Schulung</li>
+          </ul>
+        </article>
+        <article class="offer featured">
+          <span class="tag">Paket M · empfohlen</span>
+          <h3>Service-Portal</h3>
+          <p class="price">1.890 € <small>Festpreis</small></p>
+          <ul>
+            <li>Portal mit bis zu 8 Anfragearten</li>
+            <li>Fristen (SLAs) nach Geschäftszeiten</li>
+            <li>E-Mail-Anbindung, 8 Automationen</li>
+            <li>Schulung + 2 Wochen Begleitung</li>
+          </ul>
+        </article>
+        <article class="offer">
+          <span class="tag">Laufend</span>
+          <h3>Betreuung</h3>
+          <p class="price">ab 199 € <small>pro Monat</small></p>
+          <ul>
+            <li>Anpassungen und neue Regeln</li>
+            <li>Nutzerverwaltung</li>
+            <li>Ansprechpartner bei Fragen</li>
+          </ul>
+        </article>
+      </div>
+      <p class="fineprint">Größere Vorhaben mit mehreren Abteilungen, Integrationen oder Migration biete ich nach einem Workshop individuell an. Atlassian-Lizenzen sind nicht enthalten. Preise für Geschäftskunden; Umsatzsteuer wird gegebenenfalls gesondert ausgewiesen.</p>
+    </section>
+
+    <section id="ablauf" aria-labelledby="ablauf-h">
+      <div class="section-head">
+        <span class="eyebrow">Ablauf</span>
+        <h2 id="ablauf-h">Vom ersten Gespräch zum laufenden System</h2>
+      </div>
+      <ol class="steps">
+        <li><h3>Gespräch</h3><p>30 Minuten, kostenlos. Sie erzählen, wo es hakt. Ich sage ehrlich, ob und wie ich helfen kann.</p></li>
+        <li><h3>Workshop</h3><p>Wir nehmen Ihren Prozess gemeinsam auf. Sie bekommen einen Bauplan zur Freigabe.</p></li>
+        <li><h3>Einrichtung</h3><p>Ich baue und teste das System. Ein kleines Team probiert es zuerst aus.</p></li>
+        <li><h3>Start &amp; Begleitung</h3><p>Schulung je Rolle, Spickzettel und schnelle Hilfe in den ersten Wochen.</p></li>
+      </ol>
+    </section>
+
+    <section id="ueber" aria-labelledby="ueber-h">
+      <div class="about">
+        <div class="section-head">
+          <span class="eyebrow">Über mich</span>
+          <h2 id="ueber-h">Loukman <span class="placeholder">[Nachname]</span></h2>
+        </div>
+        <div class="about-text">
+          <p>Ich baue seit über einem Jahr Jira-Systeme für die Auftragsabwicklung im Maschinenbau und richte Automationen in Jira Service Management ein. Parallel studiere ich Wirtschaftsinformatik – Prozesse und Technik gehören für mich zusammen.</p>
+          <p>Mein Grundsatz: so wenig Einrichtung wie möglich, so viel wie nötig. Ein System, das Ihr Team gern nutzt, ist mehr wert als eines, das alles kann.</p>
+          <dl class="facts">
+            <div class="fact"><dt>Schwerpunkt</dt><dd>Jira, Jira Service Management, Automation</dd></div>
+            <div class="fact"><dt>Branchen</dt><dd>Maschinen- und Anlagenbau, technischer Service, IT im Mittelstand</dd></div>
+            <div class="fact"><dt>Region</dt><dd>Ruhrgebiet und NRW vor Ort, sonst remote</dd></div>
+            <div class="fact"><dt>Sprachen</dt><dd>Deutsch, Englisch</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt" aria-labelledby="kontakt-h">
+      <div class="contact">
+        <div class="section-head">
+          <span class="eyebrow">Kontakt</span>
+          <h2 id="kontakt-h">Erzählen Sie mir, wo es hakt.</h2>
+          <p class="muted">Schreiben Sie mir kurz, worum es geht und wie ich Sie am besten erreiche. Ich melde mich innerhalb von zwei Werktagen für einen Gesprächstermin.</p>
+        </div>
+        <div class="contact-box">
+          <span class="label">E-Mail</span>
+          <div class="contact-line">
+            <span id="mail">kontakt@look-eight.de</span>
+            <button class="copy" id="copy-mail" type="button" data-target="mail">Kopieren</button>
+          </div>
+          <span class="label">Telefon</span>
+          <div class="contact-line">
+            <span id="phone">[Telefonnummer]</span>
+            <button class="copy" id="copy-phone" type="button" data-target="phone">Kopieren</button>
+          </div>
+          <p class="copy-status" id="copy-status" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="legal">
+      <div id="impressum">
+        <h3>Impressum</h3>
+        <p>Angaben gemäß § 5 DDG</p>
+        <p>look-eight · Inhaber: Loukman <span class="placeholder">[Nachname]</span><br>
+        <span class="placeholder">[Straße Hausnummer]</span><br>
+        <span class="placeholder">[PLZ Ort]</span></p>
+        <p>E-Mail: kontakt@look-eight.de · Telefon: <span class="placeholder">[Telefonnummer]</span></p>
+        <p><span class="placeholder">[Falls vorhanden: USt-IdNr. oder Hinweis zur Kleinunternehmerregelung]</span></p>
+      </div>
+      <div id="datenschutz">
+        <h3>Datenschutz</h3>
+        <p>Diese Seite setzt keine Cookies und verwendet keine Analyse-Tools. Schriften werden von Google Fonts geladen; dabei wird Ihre IP-Adresse an Google übertragen.</p>
+        <p>Wenn Sie mir schreiben, nutze ich Ihre Angaben nur zur Bearbeitung Ihrer Anfrage. <span class="placeholder">[Vollständige Datenschutzerklärung ergänzen]</span></p>
+      </div>
+    </div>
+    <p>© 2026 look-eight. Jira und Atlassian sind Marken von Atlassian. look-eight ist ein unabhängiger Dienstleister.</p>
+  </footer>
+</div>
+
+<script>
+  const status = document.getElementById('copy-status');
+  document.querySelectorAll('.copy').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      const el = document.getElementById(btn.dataset.target);
+      const text = el.textContent.trim();
+      const selectIt = function () {
+        const range = document.createRange();
+        range.selectNodeContents(el);
+        const sel = window.getSelection();
+        sel.removeAllRanges();
+        sel.addRange(range);
+        status.textContent = 'Markiert – jetzt mit Strg+C bzw. ⌘+C kopieren.';
+      };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(function () {
+          status.textContent = 'Kopiert: ' + text;
+        }).catch(selectIt);
+      } else {
+        selectIt();
+      }
+    });
+  });
+</script>
