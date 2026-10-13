@@ -25,7 +25,14 @@ Ein praxisnahes Handbuch, um Jira Software und Jira Service Management (JSM) in 
 | 11 | [Rollout, Schulung & Adoption](11-rollout-schulung.md) | Pilot, Schulung je Rolle, Hypercare |
 | 12 | [Vorlagen](vorlagen/) | Angebot, Kickoff, Konzept, Abnahme, Go-Live, Betriebshandbuch |
 | 13 | [Ressourcen auf GitHub](13-ressourcen-github.md) | Die besten Repos, Bibliotheken und Tools |
+| 14 | [Erfahrungsberichte](14-erfahrungsberichte.md) | Fallstudien von Unternehmen, Erfolge und Fehlschläge aus der Praxis |
+| 15 | [Probleme & Lösungen](15-probleme-und-loesungen.md) | Nachschlagewerk: typische Fehler mit Ursache und Lösung |
+| 16 | [Aktuelle Updates 2025–2026](16-aktuelle-updates.md) | Spaces, neue Preise, Automation-Abrechnung, Rovo, Service Collection |
+| 17 | [Dashboards](17-dashboards.md) | Gadgets, Vorlagen je Rolle, Stolperfallen |
 | – | [Skripte](scripts/) | Python-Beispiele für die Jira-API |
+| – | [Quellen](quellen.md) | Alle genutzten Quellen |
+
+> **Begriffe:** Seit Ende 2025 heißen Jira-Projekte **Spaces** und Vorgänge **Work items**. Im Playbook steht teils noch „Projekt“/„Vorgang“ – gemeint ist dasselbe.
 
 ---
 

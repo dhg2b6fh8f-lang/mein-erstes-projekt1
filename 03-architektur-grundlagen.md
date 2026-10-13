@@ -24,7 +24,10 @@
 | Erweiterte Roadmaps | – | – | ✓ | ✓ |
 | Uptime-SLA | – | – | 99,9 % | 99,95 % |
 
-**JSM:** Abrechnung pro Agent (Bearbeiter); Kunden, die über das Portal Anfragen stellen, sind kostenlos. Free-Plan mit wenigen Agents – aktuelle Grenze bei Atlassian prüfen.
+**Preise ab 13.10.2026:** Standard 9,70 $, Premium 19,60 $ pro Nutzer und Monat (monatliche Zahlung).
+**Automation:** Ab 03.12.2026 werden zusätzliche Schritte abgerechnet (0,50 $ pro 1.000) – Details in [Kapitel 16](16-aktuelle-updates.md).
+
+**JSM:** Seit Oktober 2025 nur noch als **Service Collection** (JSM + Customer Service Management + Assets + Rovo). Abrechnung pro Agent; Kunden, die über das Portal Anfragen stellen, sind kostenlos. Free: bis 3 Agents.
 
 **Faustregel für KMU:** Standard reicht meistens. Premium lohnt sich bei Sandbox-Bedarf, mehreren Teams mit Roadmap-Planung oder hohem Automationsvolumen.
 
