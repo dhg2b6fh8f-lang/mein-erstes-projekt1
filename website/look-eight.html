@@ -202,6 +202,23 @@ footer { border-top: 1px solid var(--line); padding-block: 32px 48px; display: g
 .points { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 28px; font-size: .98rem; }
 .points li { display: flex; align-items: center; gap: 8px; }
 .points li::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--signal); flex: none; }
+
+/* Angebote */
+.packages { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.pkg { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; display: grid; grid-template-rows: auto auto auto 1fr auto; gap: 12px; min-width: 0; }
+.pkg.rec { border-color: var(--petrol); box-shadow: 0 0 0 2px var(--petrol-soft); }
+.pkg-tag { font-family: var(--font-mono); font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); }
+.pkg.rec .pkg-tag { color: var(--petrol); }
+.pkg .for { color: var(--muted); font-size: .95rem; }
+.pkg ul { margin: 0; padding-left: 18px; display: grid; gap: 5px; font-size: .95rem; align-content: start; }
+.pkg-foot { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; border-top: 1px solid var(--line); padding-top: 12px; flex-wrap: wrap; }
+.pkg-price { font-family: var(--font-display); font-stretch: 112%; font-weight: 800; font-size: 1.7rem; font-variant-numeric: tabular-nums; }
+.pkg-time { font-size: .85rem; color: var(--muted); }
+.extras { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 16px; }
+.extra { display: flex; justify-content: space-between; align-items: center; gap: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 18px 22px; flex-wrap: wrap; min-width: 0; }
+.extra p { color: var(--muted); font-size: .92rem; }
+.extra strong { font-family: var(--font-display); font-stretch: 112%; font-size: 1.25rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
+@media (max-width: 900px) { .packages { grid-template-columns: 1fr; } .extras { grid-template-columns: 1fr; } }
 </style>
 
 <div class="wrap">
@@ -216,7 +233,7 @@ footer { border-top: 1px solid var(--line); padding-block: 32px 48px; display: g
     </a>
     <nav class="nav" aria-label="Seitennavigation">
       <a href="#leistungen">Leistungen</a>
-      <a href="#vorgehen">Vorgehen</a>
+      <a href="#angebote">Preise</a>
       <a href="#fragen">Fragen</a>
       <a class="nav-cta" href="#kontakt">Kontakt</a>
     </nav>
@@ -231,7 +248,7 @@ footer { border-top: 1px solid var(--line); padding-block: 32px 48px; display: g
         <a class="btn" href="#leistungen">Mehr erfahren</a>
       </div>
       <ul class="points" aria-label="Das Wichtigste in Kürze">
-        <li>Festpreise</li>
+        <li>Feste Preise ab 249 €</li>
         <li>Vor Ort im Ruhrgebiet oder online</li>
         <li>An keinen Hersteller gebunden</li>
       </ul>
@@ -289,21 +306,80 @@ footer { border-top: 1px solid var(--line); padding-block: 32px 48px; display: g
     <section id="vorgehen" aria-labelledby="vorgehen-h">
       <div class="section-head">
         <span class="eyebrow">Vorgehen</span>
-        <h2 id="vorgehen-h">Klein anfangen, schnell sehen, was es bringt</h2>
+        <h2 id="vorgehen-h">In drei Schritten zur Lösung</h2>
       </div>
       <ol class="steps">
         <li><h3>Gespräch</h3><p>30 Minuten, kostenlos. Sie schildern, wo es hakt. Sie bekommen eine ehrliche Einschätzung.</p></li>
-        <li><h3>Prozess-Check</h3><p>Ein Ablauf wird gemeinsam aufgenommen. Sie erhalten einen Plan mit Aufwand und Preis.</p></li>
-        <li><h3>Umsetzung</h3><p>Einrichtung, Test mit einem kleinen Team, Schulung und Begleitung.</p></li>
+        <li><h3>Prozess-Check</h3><p>Ein Ablauf wird gemeinsam aufgenommen. Sie erhalten einen Plan mit festem Preis.</p></li>
+        <li><h3>Umsetzung</h3><p>Einrichtung, Test, Schulung und Begleitung – zum vereinbarten Festpreis.</p></li>
       </ol>
-      <div class="offer">
-        <div>
-          <h3>Prozess-Check zum Festpreis</h3>
-          <p>Ein halber Tag für einen Ablauf Ihrer Wahl, zum Beispiel Service-Anfragen oder Reklamationen. Sie erhalten eine klare Übersicht, was sich verbessern lässt und was es kostet.</p>
-        </div>
-        <p class="price">390 €<small>Festpreis, netto</small></p>
+    </section>
+
+    <section id="angebote" aria-labelledby="angebote-h">
+      <div class="section-head">
+        <span class="eyebrow">Angebote &amp; Preise</span>
+        <h2 id="angebote-h">Feste Preise. Kein Kleingedrucktes.</h2>
+        <p class="muted">Sie wissen vorher, was Sie bekommen und was es kostet. Alle Preise netto, Softwarelizenzen nicht enthalten.</p>
       </div>
-      <p class="fineprint">Umsetzungen als Festpreis-Paket, kleine Einrichtungen typischerweise ab 690 €. Laufende Betreuung ab 199 € im Monat. Softwarelizenzen sind nicht enthalten.</p>
+      <div class="extras" style="margin-top:0;margin-bottom:16px">
+        <div class="extra">
+          <div><h3>Prozess-Check</h3><p>Ein Ablauf, gemeinsam aufgenommen. Mit Plan und Festpreis für die Umsetzung. <strong style="font-family:var(--font-body);font-size:.92rem;font-weight:600;color:var(--petrol)">Wird bei Auftrag voll angerechnet.</strong></p></div>
+          <strong>249 €</strong>
+        </div>
+        <div class="extra">
+          <div><h3>Erstgespräch</h3><p>30 Minuten, online oder telefonisch. Unverbindlich.</p></div>
+          <strong>kostenlos</strong>
+        </div>
+      </div>
+      <div class="packages">
+        <article class="pkg">
+          <span class="pkg-tag">Start</span>
+          <h3>Ein Team, ein Ablauf</h3>
+          <p class="for">Für kleine Teams bis 15 Personen, die einen Ablauf digital und übersichtlich machen wollen.</p>
+          <ul>
+            <li>Einrichtung von Ablauf und Übersicht</li>
+            <li>Bis zu 3 Automationen</li>
+            <li>Übersicht für die Leitung</li>
+            <li>Schulung (60 Min.) und Spickzettel</li>
+          </ul>
+          <div class="pkg-foot"><span class="pkg-price">590 €</span><span class="pkg-time">ca. 1–2 Wochen</span></div>
+        </article>
+        <article class="pkg rec">
+          <span class="pkg-tag">Service-Portal · Empfehlung</span>
+          <h3>Alle Anfragen an einem Ort</h3>
+          <p class="for">Für Service-, IT- oder Kundendienst-Teams, deren Anfragen heute über Mail und Telefon verstreut sind.</p>
+          <ul>
+            <li>Portal mit bis zu 6 Anfragearten</li>
+            <li>E-Mail-Anbindung</li>
+            <li>Fristen nach Geschäftszeiten</li>
+            <li>Bis zu 6 Automationen</li>
+            <li>Schulung für Team und Leitung</li>
+            <li>2 Wochen Begleitung nach dem Start</li>
+          </ul>
+          <div class="pkg-foot"><span class="pkg-price">1.490 €</span><span class="pkg-time">ca. 2–4 Wochen</span></div>
+        </article>
+        <article class="pkg">
+          <span class="pkg-tag">Betrieb im Wandel</span>
+          <h3>Mehrere Abteilungen</h3>
+          <p class="for">Für Vorhaben mit mehreren Teams, Übernahme alter Daten oder Anbindung an andere Programme.</p>
+          <ul>
+            <li>Umfang nach dem Prozess-Check</li>
+            <li>Als Festpreis angeboten</li>
+            <li>Schrittweise Einführung</li>
+          </ul>
+          <div class="pkg-foot"><span class="pkg-price">ab 2.900 €</span><span class="pkg-time">nach Umfang</span></div>
+        </article>
+      </div>
+      <div class="extras">
+        <div class="extra">
+          <div><h3>Betreuung</h3><p>Bis zu 3 Stunden im Monat für Anpassungen, neue Regeln und Fragen. Monatlich kündbar.</p></div>
+          <strong>149 € / Monat</strong>
+        </div>
+        <div class="extra">
+          <div><h3>Einzelne Aufgaben</h3><p>Für alles, was in kein Paket passt.</p></div>
+          <strong>55 € / Std.</strong>
+        </div>
+      </div>
     </section>
 
     <section aria-labelledby="beispiel-h">
@@ -338,7 +414,7 @@ footer { border-top: 1px solid var(--line); padding-block: 32px 48px; display: g
         <h2 id="fragen-h">Was Kunden vorher wissen wollen</h2>
       </div>
       <div class="faq">
-        <details><summary>Was kostet das?</summary><p>Das Erstgespräch ist kostenlos. Der Prozess-Check kostet 390 € netto. Danach gibt es ein Festpreis-Angebot für die Umsetzung, kleine Einrichtungen typischerweise ab 690 €.</p></details>
+        <details><summary>Was kostet das?</summary><p>Das Erstgespräch ist kostenlos. Der Prozess-Check kostet 249 € netto und wird bei Auftrag voll angerechnet. Pakete gibt es ab 590 €, ein Service-Portal für 1.490 €. Alle Preise finden Sie oben unter „Angebote &amp; Preise“.</p></details>
         <details><summary>Wie lange dauert es?</summary><p>Ein Check dauert einen halben Tag. Eine kleine Umsetzung ist meist in zwei bis vier Wochen startklar.</p></details>
         <details><summary>Müssen wir Jira nutzen?</summary><p>Nein. Empfohlen wird, was zu Ihrem Betrieb passt. Wenn eine einfachere Lösung reicht, sagen wir Ihnen das.</p></details>
         <details><summary>Wie viel Zeit braucht unser Team?</summary><p>Für den Check etwa einen halben Tag mit den Beteiligten. Danach kurze Abstimmungen und eine Schulung je Rolle.</p></details>

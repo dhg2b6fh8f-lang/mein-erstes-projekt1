@@ -13,7 +13,7 @@
 
 ## Pakete
 
-> Beispielpreise für den Einstieg – an Erfahrung, Region und Umfang anpassen.
+> Aktuelle Preise: siehe [vertrieb/11-angebote-preise-final.md](../vertrieb/11-angebote-preise-final.md). Prozess-Check 249 €, wird bei Auftrag angerechnet.
 
 ### Paket S – Jira Starter
 Für 1 Team, 1 Prozess, bis 15 Nutzer
@@ -23,7 +23,7 @@ Für 1 Team, 1 Prozess, bis 15 Nutzer
 - 1 Dashboard
 - Schulung (1 × 90 Min.)
 - Spickzettel
-- **Festpreis: <z. B. 690 €>**
+- **Festpreis: 590 €**
 
 ### Paket M – Service Desk (JSM)
 Für Service-/IT-/Kundendienst-Teams
@@ -35,7 +35,7 @@ Für Service-/IT-/Kundendienst-Teams
 - Wissensdatenbank-Anbindung
 - Schulung Agents + Leitung, Spickzettel für Portal-Nutzer
 - 2 Wochen Hypercare
-- **Festpreis: <z. B. 1.890 €>**
+- **Festpreis: 1.490 €**
 
 ### Paket L – Mehrere Abteilungen & Integrationen
 - Discovery für mehrere Prozesse
@@ -45,15 +45,15 @@ Für Service-/IT-/Kundendienst-Teams
 - Integrationen (z. B. Teams, ERP/CRM über API oder n8n)
 - Migration aus Excel/Altsystem
 - Pilot + Rollout + 4 Wochen Hypercare
-- **Preis nach Aufwand, Schätzung: <z. B. 4.000–8.000 €>**
+- **Preis nach Aufwand, Schätzung: ab 2.900 €**
 
 ### Zusatzleistungen
 | Leistung | Preis |
 |---|---|
-| Zusätzliche Automation | <z. B. 60–120 € pro Regel> |
-| Zusätzliche Schulung (90 Min.) | <z. B. 150 €> |
-| Stundensatz für Sonstiges | <z. B. 55 €/h> |
-| **Wartungsvertrag** (Anpassungen, Nutzerverwaltung, Fragen) | <z. B. 4 h/Monat für 199 €> |
+| Zusätzliche Automation | 60 € pro Regel |
+| Zusätzliche Schulung (90 Min.) | 90 € (60 Min.) |
+| Stundensatz für Sonstiges | 55 €/h |
+| **Wartungsvertrag** (Anpassungen, Nutzerverwaltung, Fragen) | bis 3 h/Monat für 149 €, monatlich kündbar |
 
 ---
 

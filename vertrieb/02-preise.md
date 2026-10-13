@@ -1,5 +1,7 @@
 # 02 – Preise
 
+> **Aktuelle, verbindliche Preise:** [11 – Angebote & Preise](11-angebote-preise-final.md). Die Zahlen unten sind Beispiele zur Erklärung.
+
 ## 1. Was der Markt zahlt (Deutschland, 2026)
 
 | Quelle | Wert |

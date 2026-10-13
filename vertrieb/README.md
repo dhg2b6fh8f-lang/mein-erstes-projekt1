@@ -18,6 +18,7 @@ Wie man als Einzelberater Jira-/JSM-Einführungen an Unternehmen verkauft: Posit
 | 08 | [Kundenbindung & Empfehlungen](08-kundenbindung-empfehlungen.md) | Wie werden aus Projekten Folgeaufträge? |
 | 09 | [Pipeline & Kennzahlen](09-pipeline-kennzahlen.md) | Wie behalte ich den Überblick? |
 | 10 | [Förderung, Partner & Plattformen](10-foerderung-partner-plattformen.md) | Welche Hebel gibt es zusätzlich? |
+| 11 | **[Angebote & Preise (final)](11-angebote-preise-final.md)** | Was kostet was – mit Marktvergleich |
 | – | [Vorlagen](vorlagen/) | LinkedIn-Nachrichten, Telefonleitfaden, Brief, Follow-ups, Gesprächsnotiz, Fallstudie |
 | – | [Quellen](quellen.md) | Alle genutzten Quellen |
 
