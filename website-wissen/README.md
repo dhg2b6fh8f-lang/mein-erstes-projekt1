@@ -12,6 +12,7 @@ Wie eine professionelle Website für einen kleinen B2B-Dienstleister aussieht, w
 | 04 | [Wettbewerb](04-wettbewerb.md) | Was machen andere – und wo ist unsere Lücke? |
 | 05 | [Betrieb & Content](05-betrieb-content.md) | Was posten, wie messen, wo hosten, welche Routine? |
 | – | [Checkliste vor dem Livegang](06-checkliste-livegang.md) | Alles abhaken, bevor die Seite online geht |
+| 07 | [Der erste Bildschirm](07-einfacher-einstieg.md) | Wie der Einstieg einfach und klar wird |
 | – | [Quellen](quellen.md) | Alle Quellen |
 
 ## Die 7 Leitsätze für look-eight

@@ -1,5 +1,5 @@
 <title>look-eight</title>
-<meta name="description" content="look-eight bringt Ordnung in Serviceaufträge, Reklamationen und Projekte im Mittelstand – mit den Werkzeugen, die zum Betrieb passen. Persönlich, aus dem Ruhrgebiet.">
+<meta name="description" content="look-eight bringt Ordnung in Serviceaufträge, Reklamationen und Projekte im Mittelstand – mit den Werkzeugen, die zum Betrieb passen. Festpreise, herstellerneutral, aus dem Ruhrgebiet.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- Vorschau: Schriften von Google. Vor dem Livegang lokal einbinden (siehe website-wissen/03-recht.md). -->
@@ -194,6 +194,14 @@ footer { border-top: 1px solid var(--line); padding-block: 32px 48px; display: g
   section { padding-block: 48px; }
   .nav a:not(.nav-cta) { display: none; }
 }
+
+/* Einfacher Hero */
+.hero-simple { display: grid; gap: 22px; padding-block: 56px 64px; max-width: 760px; }
+.hero-simple h1 { font-size: var(--step-3); font-weight: 800; letter-spacing: -0.015em; }
+.hero-simple .lead { font-size: 1.2rem; color: var(--muted); max-width: 54ch; }
+.points { list-style: none; margin: 8px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 28px; font-size: .98rem; }
+.points li { display: flex; align-items: center; gap: 8px; }
+.points li::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: var(--signal); flex: none; }
 </style>
 
 <div class="wrap">
@@ -209,97 +217,71 @@ footer { border-top: 1px solid var(--line); padding-block: 32px 48px; display: g
     <nav class="nav" aria-label="Seitennavigation">
       <a href="#leistungen">Leistungen</a>
       <a href="#vorgehen">Vorgehen</a>
-      <a href="#ueber">Über mich</a>
       <a href="#fragen">Fragen</a>
-      <a class="nav-cta" href="#kontakt">Gespräch vereinbaren</a>
+      <a class="nav-cta" href="#kontakt">Kontakt</a>
     </nav>
   </header>
 
   <main id="start">
-    <div class="hero">
-      <div class="hero-copy">
-        <span class="eyebrow">Abläufe für Mittelstand, Maschinenbau und technischen Service</span>
-        <h1>Damit Aufträge, Service und Reklamationen <em>nicht mehr</em> in Postfächern verschwinden.</h1>
-        <p class="lead">Ich schaue mir an, wie Arbeit bei Ihnen heute wirklich läuft, wähle das passende Werkzeug und richte es so ein, dass Ihr Team es gern nutzt. Persönlich, aus dem Ruhrgebiet.</p>
-        <div class="actions">
-          <a class="btn btn-primary" href="#kontakt">30-Minuten-Gespräch vereinbaren</a>
-          <a class="btn" href="#leistungen">So helfe ich</a>
-        </div>
-        <div class="hero-person">
-          <span class="avatar" aria-hidden="true">Foto<br>folgt</span>
-          <span>Loukman <span class="ph">[Nachname]</span> · Ansprechpartner für Ihr Projekt, von der ersten Frage bis zur Übergabe</span>
-        </div>
+    <div class="hero-simple">
+      <h1>Damit im Betrieb nichts mehr liegen bleibt.</h1>
+      <p class="lead">look-eight hilft Unternehmen im Mittelstand, Aufträge, Service-Anfragen und Reklamationen einfach und übersichtlich zu organisieren.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#kontakt">Kostenloses Erstgespräch</a>
+        <a class="btn" href="#leistungen">Mehr erfahren</a>
       </div>
-
-      <figure class="ticket" aria-label="Beispiel einer digitalen Laufkarte für eine Reklamation">
-        <div class="ticket-head"><strong>Laufkarte · Reklamation R-0417</strong><span>Beispiel</span></div>
-        <div class="ticket-body">
-          <p class="ticket-title">Spindel läuft unruhig nach Wartung</p>
-          <dl class="fields">
-            <div><dt>Kunde</dt><dd>Maschinenbauer aus NRW</dd></div>
-            <div><dt>Anlage</dt><dd>Fräszentrum, Seriennr. 2231</dd></div>
-            <div><dt>Zuständig</dt><dd>Service-Team Süd</dd></div>
-            <div><dt>Antwort bis</dt><dd>heute, 16:00</dd></div>
-          </dl>
-          <ol class="track" aria-label="Fortschritt">
-            <li class="done">Eingang</li>
-            <li class="done">Zugeordnet</li>
-            <li class="now">In Prüfung</li>
-            <li>Abgeschlossen</li>
-          </ol>
-        </div>
-        <figcaption class="ticket-foot">Jeder Fall hat eine verantwortliche Person, eine Frist und einen sichtbaren Stand – egal ob per Mail, Telefon oder Portal gemeldet.</figcaption>
-      </figure>
+      <ul class="points" aria-label="Das Wichtigste in Kürze">
+        <li>Festpreise</li>
+        <li>Vor Ort im Ruhrgebiet oder online</li>
+        <li>An keinen Hersteller gebunden</li>
+      </ul>
     </div>
 
     <section aria-labelledby="situationen-h">
       <div class="section-head">
         <span class="eyebrow">Kennen Sie das?</span>
-        <h2 id="situationen-h">Vier Situationen, die ich in Betrieben oft sehe</h2>
+        <h2 id="situationen-h">Typische Situationen in Betrieben</h2>
       </div>
       <div class="problems">
         <div class="problem">
-          <p class="quote">„Wer kümmert sich eigentlich um die Störung von gestern?“</p>
-          <p class="muted">Anfragen kommen per Mail, Telefon und Zuruf. Niemand sieht alles, manches bleibt liegen.</p>
+          <p class="quote">„Wer kümmert sich um die Störung von gestern?“</p>
+          <p class="muted">Anfragen kommen per Mail, Telefon und Zuruf. Manches bleibt liegen.</p>
         </div>
         <div class="problem">
           <p class="quote">„Wo steht der Auftrag gerade?“</p>
-          <p class="muted">Der Stand steckt in Excel-Listen und in den Köpfen einzelner Leute. Fällt jemand aus, wird es schwierig.</p>
+          <p class="muted">Der Stand steckt in Excel-Listen und in den Köpfen einzelner Leute.</p>
         </div>
         <div class="problem">
           <p class="quote">„Das tragen wir dreimal ein.“</p>
-          <p class="muted">Dieselben Daten wandern von Mail zu Liste zu System. Das kostet Zeit und erzeugt Fehler.</p>
+          <p class="muted">Dieselben Daten wandern von Mail zu Liste zu System. Das kostet Zeit.</p>
         </div>
         <div class="problem">
-          <p class="quote">„Wir haben ein System, aber keiner nutzt es richtig.“</p>
-          <p class="muted">Zu viele Felder, zu viele Regeln. Das Team weicht auf Zettel und Mails aus.</p>
+          <p class="quote">„Wir haben ein System, aber keiner nutzt es.“</p>
+          <p class="muted">Zu kompliziert eingerichtet. Das Team weicht auf Zettel und Mails aus.</p>
         </div>
       </div>
     </section>
 
     <section id="leistungen" aria-labelledby="leistungen-h">
       <div class="section-head">
-        <span class="eyebrow">So helfe ich</span>
-        <h2 id="leistungen-h">Erst verstehen, dann einrichten, dann begleiten</h2>
+        <span class="eyebrow">Leistungen</span>
+        <h2 id="leistungen-h">Verstehen, einrichten, begleiten</h2>
       </div>
       <div class="services">
         <div class="service">
-          <span class="service-kicker">Verstehen</span>
+          <span class="service-kicker">1 · Verstehen</span>
           <h3>Abläufe aufnehmen</h3>
-          <p class="muted">Gemeinsam mit den Leuten, die die Arbeit machen, zeichnen wir auf, wie Aufträge, Anfragen oder Reklamationen heute laufen und wo es hakt.</p>
-          <ul><li>Workshop vor Ort oder online</li><li>Klares Bild: Wer, was, wann, womit</li><li>Ehrliche Einschätzung, was sich lohnt</li></ul>
+          <p class="muted">Gemeinsam mit Ihrem Team schauen wir, wie die Arbeit heute läuft und wo es hakt.</p>
         </div>
         <div class="service">
-          <span class="service-kicker">Einrichten</span>
-          <h3>Das passende Werkzeug</h3>
-          <p class="muted">Ich richte ein, was zu Ihrem Betrieb passt – oft Jira oder ein Service-Portal, manchmal eine einfache Automatisierung, manchmal reicht eine bessere Liste.</p>
-          <ul><li>Schlank: wenige Schritte, wenige Pflichtfelder</li><li>Automatisierung von Routinearbeit</li><li>Übernahme bestehender Daten</li></ul>
+          <span class="service-kicker">2 · Einrichten</span>
+          <h3>Passende Lösung</h3>
+          <p class="muted">Ein Werkzeug, das zu Ihrem Betrieb passt – oft Jira oder ein Service-Portal, manchmal reicht etwas Einfacheres.</p>
         </div>
         <div class="service">
-          <span class="service-kicker">Begleiten</span>
-          <h3>Team befähigen und betreuen</h3>
-          <p class="muted">Ein System hilft nur, wenn es genutzt wird. Darum gehören Schulung und schnelle Hilfe in den ersten Wochen immer dazu.</p>
-          <ul><li>Kurze Schulungen je Rolle</li><li>Spickzettel statt Handbuch</li><li>Laufende Betreuung auf Wunsch</li></ul>
+          <span class="service-kicker">3 · Begleiten</span>
+          <h3>Team mitnehmen</h3>
+          <p class="muted">Kurze Schulungen, Spickzettel und schnelle Hilfe in den ersten Wochen. Auf Wunsch laufende Betreuung.</p>
         </div>
       </div>
     </section>
@@ -310,77 +292,44 @@ footer { border-top: 1px solid var(--line); padding-block: 32px 48px; display: g
         <h2 id="vorgehen-h">Klein anfangen, schnell sehen, was es bringt</h2>
       </div>
       <ol class="steps">
-        <li><h3>Gespräch</h3><p>30 Minuten, kostenlos. Sie schildern, wo es hakt. Ich sage ehrlich, ob und wie ich helfen kann.</p></li>
-        <li><h3>Prozess-Check</h3><p>Wir nehmen einen Ablauf gemeinsam auf. Sie erhalten einen Bauplan mit Aufwand und Preis.</p></li>
-        <li><h3>Umsetzung</h3><p>Einrichtung, Test mit einem kleinen Team, Schulung und Begleitung in den ersten Wochen.</p></li>
+        <li><h3>Gespräch</h3><p>30 Minuten, kostenlos. Sie schildern, wo es hakt. Sie bekommen eine ehrliche Einschätzung.</p></li>
+        <li><h3>Prozess-Check</h3><p>Ein Ablauf wird gemeinsam aufgenommen. Sie erhalten einen Plan mit Aufwand und Preis.</p></li>
+        <li><h3>Umsetzung</h3><p>Einrichtung, Test mit einem kleinen Team, Schulung und Begleitung.</p></li>
       </ol>
       <div class="offer">
         <div>
           <h3>Prozess-Check zum Festpreis</h3>
-          <p>Ein halber Tag für einen Ablauf Ihrer Wahl, etwa Service-Anfragen, Reklamationen oder Auftragsabwicklung. Sie bekommen eine klare Übersicht, was sich verbessern lässt und was es kostet – auch wenn Sie danach selbst weitermachen.</p>
+          <p>Ein halber Tag für einen Ablauf Ihrer Wahl, zum Beispiel Service-Anfragen oder Reklamationen. Sie erhalten eine klare Übersicht, was sich verbessern lässt und was es kostet.</p>
         </div>
         <p class="price">390 €<small>Festpreis, netto</small></p>
       </div>
-      <p class="fineprint">Umsetzungen biete ich nach dem Check als Festpreis-Paket an, kleine Einrichtungen typischerweise ab 690 €. Laufende Betreuung ab 199 € im Monat. Softwarelizenzen sind nicht enthalten.</p>
+      <p class="fineprint">Umsetzungen als Festpreis-Paket, kleine Einrichtungen typischerweise ab 690 €. Laufende Betreuung ab 199 € im Monat. Softwarelizenzen sind nicht enthalten.</p>
     </section>
 
     <section aria-labelledby="beispiel-h">
       <div class="section-head">
-        <span class="eyebrow">Wie das aussehen kann</span>
+        <span class="eyebrow">Beispiel</span>
         <h2 id="beispiel-h">Service-Anfragen in einem technischen Betrieb</h2>
       </div>
       <div class="example">
         <div class="before">
           <span class="label">Vorher</span>
           <ul>
-            <li>Anfragen landen in drei Postfächern und am Telefon</li>
+            <li>Anfragen in drei Postfächern und am Telefon</li>
             <li>Stand nur durch Nachfragen bekannt</li>
-            <li>Ersatzteil-Anfragen gehen im Tagesgeschäft unter</li>
-            <li>Leitung sieht erst bei Beschwerden, dass etwas hängt</li>
+            <li>Leitung merkt Probleme erst bei Beschwerden</li>
           </ul>
         </div>
         <div class="after">
           <span class="label">Nachher</span>
           <ul>
-            <li>Ein Eingang für alle Anfragen, automatisch zugeordnet</li>
+            <li>Ein Eingang für alle Anfragen</li>
             <li>Jeder Fall mit Zuständigkeit und Frist</li>
-            <li>Kunden bekommen Rückmeldung, ohne nachfragen zu müssen</li>
             <li>Übersicht für die Leitung auf einen Blick</li>
           </ul>
         </div>
       </div>
-      <p class="example-note">Typischer Ablauf zur Veranschaulichung. Konkrete Fallbeispiele mit Kundenfreigabe folgen.</p>
-    </section>
-
-    <section id="ueber" aria-labelledby="ueber-h">
-      <div class="about">
-        <div class="portrait" role="img" aria-label="Platz für Porträtfoto">Porträtfoto folgt</div>
-        <div class="about-text">
-          <span class="eyebrow">Über mich</span>
-          <h2 id="ueber-h">Loukman <span class="ph">[Nachname]</span></h2>
-          <p>Ich baue seit über einem Jahr digitale Abläufe für Auftragsabwicklung und Service im Maschinenbau und studiere parallel Wirtschaftsinformatik. Prozesse und Technik gehören für mich zusammen – und am Ende zählt, ob es im Alltag funktioniert.</p>
-          <p>Ich arbeite als Einzelperson. Sie haben immer denselben Ansprechpartner, und ich übernehme nur, was ich gut kann. Wenn ein Vorhaben größer ist, sage ich das offen.</p>
-          <dl class="facts">
-            <div class="fact"><dt>Schwerpunkt</dt><dd>Service, Reklamation, Auftragsabwicklung, Automatisierung</dd></div>
-            <div class="fact"><dt>Branchen</dt><dd>Maschinen- und Anlagenbau, technischer Service, Mittelstand</dd></div>
-            <div class="fact"><dt>Region</dt><dd>Ruhrgebiet, Südwestfalen und NRW vor Ort, sonst online</dd></div>
-            <div class="fact"><dt>Kontakt</dt><dd><a href="#kontakt">E-Mail und Telefon</a> · <span class="ph">[LinkedIn-Profil]</span></dd></div>
-          </dl>
-        </div>
-      </div>
-    </section>
-
-    <section aria-labelledby="werkzeuge-h">
-      <div class="section-head">
-        <span class="eyebrow">Werkzeuge</span>
-        <h2 id="werkzeuge-h">Das Werkzeug richtet sich nach Ihnen, nicht umgekehrt</h2>
-        <p class="muted">Ich bin an keinen Hersteller gebunden und verdiene nicht an Lizenzen.</p>
-      </div>
-      <div class="tools">
-        <div class="tool"><h3>Jira &amp; Jira Service Management</h3><p>Mein Schwerpunkt. Für Projekte, Aufträge und Service-Portale mit Fristen, wenn mehrere Leute zusammenarbeiten.</p></div>
-        <div class="tool"><h3>Automatisierung</h3><p>Routinearbeit wie Zuordnen, Erinnern und Weiterleiten läuft automatisch – innerhalb des Systems oder zwischen Systemen.</p></div>
-        <div class="tool"><h3>Was Sie schon haben</h3><p>Manchmal reicht eine bessere Struktur in vorhandenen Programmen. Dann sage ich Ihnen das.</p></div>
-      </div>
+      <p class="example-note">Typischer Ablauf zur Veranschaulichung.</p>
     </section>
 
     <section id="fragen" aria-labelledby="fragen-h">
@@ -389,12 +338,12 @@ footer { border-top: 1px solid var(--line); padding-block: 32px 48px; display: g
         <h2 id="fragen-h">Was Kunden vorher wissen wollen</h2>
       </div>
       <div class="faq">
-        <details><summary>Was kostet das?</summary><p>Das Erstgespräch ist kostenlos. Der Prozess-Check kostet 390 € netto. Danach erhalten Sie ein Festpreis-Angebot für die Umsetzung, kleine Einrichtungen typischerweise ab 690 €. Sie wissen also vorher, was es kostet.</p></details>
-        <details><summary>Wie lange dauert es?</summary><p>Ein Check dauert einen halben Tag. Eine kleine Umsetzung ist meist in zwei bis vier Wochen startklar, je nachdem, wie schnell Ihr Team Zeit für Abstimmungen hat.</p></details>
-        <details><summary>Was, wenn wir kein Jira wollen?</summary><p>Kein Problem. Ich empfehle, was zu Ihrem Betrieb passt. Wenn eine einfachere Lösung reicht, sage ich das.</p></details>
-        <details><summary>Wie viel Zeit braucht unser Team?</summary><p>Für einen Check etwa einen halben Tag mit den Beteiligten. Während der Umsetzung kurze Abstimmungen und eine Schulung je Rolle. Den Rest übernehme ich.</p></details>
-        <details><summary>Wie ist es mit Datenschutz?</summary><p>Wir klären am Anfang, welche Daten wo gespeichert werden und was Ihr Datenschutzbeauftragter braucht. Wo nötig, schließen wir einen Vertrag zur Auftragsverarbeitung.</p></details>
-        <details><summary>Gibt es Fördermittel?</summary><p>Für kleine und mittlere Unternehmen gibt es Förderprogramme für Beratung zur Digitalisierung. Ob und welche für Sie passen, klären Sie am besten mit Ihrer IHK. Ich helfe gern bei der Vorbereitung.</p></details>
+        <details><summary>Was kostet das?</summary><p>Das Erstgespräch ist kostenlos. Der Prozess-Check kostet 390 € netto. Danach gibt es ein Festpreis-Angebot für die Umsetzung, kleine Einrichtungen typischerweise ab 690 €.</p></details>
+        <details><summary>Wie lange dauert es?</summary><p>Ein Check dauert einen halben Tag. Eine kleine Umsetzung ist meist in zwei bis vier Wochen startklar.</p></details>
+        <details><summary>Müssen wir Jira nutzen?</summary><p>Nein. Empfohlen wird, was zu Ihrem Betrieb passt. Wenn eine einfachere Lösung reicht, sagen wir Ihnen das.</p></details>
+        <details><summary>Wie viel Zeit braucht unser Team?</summary><p>Für den Check etwa einen halben Tag mit den Beteiligten. Danach kurze Abstimmungen und eine Schulung je Rolle.</p></details>
+        <details><summary>Wie ist es mit Datenschutz?</summary><p>Am Anfang wird geklärt, welche Daten wo gespeichert werden. Wo nötig, gibt es einen Vertrag zur Auftragsverarbeitung.</p></details>
+        <details><summary>Gibt es Fördermittel?</summary><p>Für kleine und mittlere Unternehmen gibt es Förderprogramme für Digitalisierungsberatung. Ihre IHK weiß, welche aktuell passen. Bei der Vorbereitung helfen wir gern.</p></details>
       </div>
     </section>
 
@@ -402,8 +351,8 @@ footer { border-top: 1px solid var(--line); padding-block: 32px 48px; display: g
       <div class="contact">
         <div class="section-head">
           <span class="eyebrow">Kontakt</span>
-          <h2 id="kontakt-h">Erzählen Sie mir, wo es hakt.</h2>
-          <p class="muted">Schreiben Sie kurz, worum es geht und wie ich Sie erreiche. Ich melde mich innerhalb von zwei Werktagen mit einem Terminvorschlag für ein 30-Minuten-Gespräch.</p>
+          <h2 id="kontakt-h">Erzählen Sie uns, wo es hakt.</h2>
+          <p class="muted">Schreiben Sie kurz, worum es geht. Sie bekommen innerhalb von zwei Werktagen einen Terminvorschlag für ein 30-Minuten-Gespräch.</p>
         </div>
         <div class="contact-box">
           <span class="label">E-Mail</span>
@@ -427,15 +376,11 @@ footer { border-top: 1px solid var(--line); padding-block: 32px 48px; display: g
       <div id="impressum">
         <h3>Impressum</h3>
         <p>Angaben gemäß § 5 DDG</p>
-        <p>look-eight · Inhaber: Loukman <span class="ph">[Nachname]</span><br>
-        <span class="ph">[Straße Hausnummer]</span><br>
-        <span class="ph">[PLZ Ort]</span></p>
-        <p>E-Mail: <span class="ph">[E-Mail-Adresse]</span> · Telefon: <span class="ph">[Telefonnummer]</span></p>
-        <p><span class="ph">[USt-IdNr. oder W-IdNr., falls vorhanden]</span></p>
+        <p><span class="ph">[Pflichtangaben: Name, Anschrift, E-Mail, Telefon – vor dem Livegang ergänzen]</span></p>
       </div>
       <div id="datenschutz">
         <h3>Datenschutz</h3>
-        <p>Diese Seite setzt keine Cookies und verwendet keine Analyse-Werkzeuge. <span class="ph">[Vollständige Datenschutzerklärung mit Angaben zu Hosting und Kontaktaufnahme ergänzen]</span></p>
+        <p>Diese Seite setzt keine Cookies und verwendet keine Analyse-Werkzeuge. <span class="ph">[Vollständige Datenschutzerklärung ergänzen]</span></p>
       </div>
     </div>
     <p>Das Angebot richtet sich ausschließlich an Unternehmen. Jira ist eine Marke von Atlassian; look-eight ist ein unabhängiger Dienstleister. © 2026 look-eight</p>
